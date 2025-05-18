@@ -12,7 +12,12 @@ import hyt4 from "./hyt4.png";
 import map from "./map.png";
 import about from "./about.png";
 import aboutH from "./abHero.png";
-
+import feat from "./feat.jpg";
+import life from "./life.jpg";
+import comm from "./comm.png";
+import gradens from "./gardens.png";
+import home from "./home.png";
+import pool from "./pool.png";
 export {
   logo,
   hero1,
@@ -28,4 +33,10 @@ export {
   map,
   about,
   aboutH,
+  feat,
+  life,
+  comm,
+  gradens,
+  home,
+  pool,
 };

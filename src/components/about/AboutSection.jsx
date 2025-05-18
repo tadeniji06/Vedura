@@ -10,7 +10,7 @@ const AboutSection = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className='w-full lg:w-[550px] h-[300px] lg:h-[480px]'
+        className='w-full lg:w-[600px] h-[300px] lg:h-[480px]'
       >
         <img
           className='w-full h-full object-cover rounded-xl'
