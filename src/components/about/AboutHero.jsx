@@ -25,12 +25,12 @@ const AboutHero = () => {
             className='flex flex-col gap-4 text-white text-center md:text-left max-w-xl'
           >
             <span className='text-2xl md:text-4xl font-bold leading-snug'>
-              The Vision Behind Vendura
+              The Vision Behind Vedura
             </span>
             <p className='text-sm md:text-base leading-relaxed'>
-              At Vendura, we believe that a home should be more than a
+              At Vedura, we believe that a home should be more than a
               structure — it should be a sanctuary. <br />
-              Inspired by nature and refined by design, Vendura is a
+              Inspired by nature and refined by design, Vedura is a
               curated response to the need for calm, beauty, and
               functionality in modern living.
             </p>

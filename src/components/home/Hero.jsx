@@ -1,26 +1,46 @@
 import { hero1, hero3 } from "../../assets";
 import Header from "../../layouts/Header";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const images = [hero1, hero3];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className='relative'>
-      <div
-        className='bg-cover bg-center bg-no-repeat w-full h-[650px] md:h-[800px] relative'
-        style={{ backgroundImage: `url(${hero1})` }}
-      >
-        {/* Header with proper positioning */}
+      <div className='relative w-full h-[650px] md:h-[800px] overflow-hidden'>
+        {/* Background Images */}
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+              currentIndex === index ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
+
+        {/* Header with highest z-index */}
         <div className='absolute top-0 left-0 w-full z-50'>
-          <Header className='' />
+          <Header />
         </div>
-        {/* Optional:  overlay for better text readability */}
+
+        {/* Overlay */}
         <div className='absolute inset-0 bg-black/20'></div>
 
-        {/* Content area */}
+        {/* Content */}
         <div className='relative z-10 flex items-center justify-center min-h-[800px]'>
-          <div className='flex flex-col gap-8 text-white items-center mt-[-180px] md:mt-0'>
+          <div className='flex flex-col gap-8 text-white items-center mt-[-180px] md:mt-0 px-4'>
             <h1 className='text-center md:text-6xl text-3xl font-medium'>
-              Vendura: Live.Work.Play
+              Vedura: Live.Work.Play
             </h1>
             <p className='text-center font-semibold text-lg'>
               An exclusive resort-inspired community where luxury meets{" "}

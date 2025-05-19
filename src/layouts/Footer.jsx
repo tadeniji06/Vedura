@@ -21,14 +21,17 @@ const itemVariants = {
 const Footer = () => {
   return (
     <motion.footer
-      className='bg-primary-green mt-10 px-6 py-10 flex flex-col md:flex-row md:justify-between md:items-start gap-10'
+      className='bg-primary-green mt-10 px-6 py-10 flex flex-col md:flex-row md:gap-[300px] gap-10 md:px-[350px]'
       variants={containerVariants}
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true, amount: 0.3 }}
     >
       {/* Left side */}
-      <motion.div className='flex flex-col gap-5 md:w-1/2' variants={itemVariants}>
+      <motion.div
+        className='flex flex-col gap-5 md:w-1/2'
+        variants={itemVariants}
+      >
         <img className='w-[120px] h-[38px]' src={logo} alt='Logo' />
 
         <div className='flex flex-wrap gap-5'>
@@ -55,7 +58,10 @@ const Footer = () => {
               type='email'
               placeholder='Email address'
             />
-            <Icon className='text-white text-2xl cursor-pointer' icon={"weui:arrow-filled"} />
+            <Icon
+              className='text-white text-2xl cursor-pointer'
+              icon={"weui:arrow-filled"}
+            />
           </div>
         </div>
 
@@ -67,8 +73,11 @@ const Footer = () => {
       </motion.div>
 
       {/* Right side */}
-      <motion.div className='flex flex-col gap-8 md:w-1/2' variants={itemVariants}>
-        <div className='flex flex-wrap gap-10 text-white'>
+      <motion.div
+        className='flex flex-col gap-8 md:w-1/2'
+        variants={itemVariants}
+      >
+        <div className='flex flex-wrap gap-24 text-white'>
           <div className='flex flex-col gap-2'>
             <p className='font-bold'>Quick Links</p>
             {navLinks.map((item) => (
@@ -87,13 +96,15 @@ const Footer = () => {
               Why Arepo?
             </Link>
             <Link to='#' className='hover:underline text-sm md:text-base'>
-              Why Vendura?
+              Why Vedura?
             </Link>
           </div>
         </div>
 
         <div className='flex flex-wrap gap-4 text-white text-sm md:text-base'>
-          <p className='hover:underline cursor-pointer'>Terms & Conditions</p>
+          <p className='hover:underline cursor-pointer'>
+            Terms & Conditions
+          </p>
           <p className='hover:underline cursor-pointer'>Cookie Policy</p>
           <p className='hover:underline cursor-pointer'>Privacy Policy</p>
         </div>

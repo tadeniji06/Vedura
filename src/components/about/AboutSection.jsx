@@ -15,7 +15,7 @@ const AboutSection = () => {
         <img
           className='w-full h-full object-cover rounded-xl'
           src={about}
-          alt='About Vendura'
+          alt='About Vedura'
         />
       </motion.div>
 
@@ -32,14 +32,14 @@ const AboutSection = () => {
         </span>
 
         <p className='text-sm md:text-base leading-relaxed text-gray-700'>
-          Vendura is more than a residence — it's a lifestyle vision thoughtfully crafted
+          Vedura is more than a residence — it's a lifestyle vision thoughtfully crafted
           for those who value elegance, peace, and purpose. Inspired by resort-style living
-          and grounded in natural beauty, Vendura blends refined architecture with calming
+          and grounded in natural beauty, Vedura blends refined architecture with calming
           earth tones, lush landscapes, and intuitive design.
         </p>
 
         <p className='text-sm md:text-base leading-relaxed text-gray-700'>
-          Each space within Vendura is designed to nurture well-being — from tranquil garden
+          Each space within Vedura is designed to nurture well-being — from tranquil garden
           paths to smart-enabled homes that simplify your everyday. It's a sanctuary for
           modern living, rooted in nature, yet connected to everything you need.
         </p>

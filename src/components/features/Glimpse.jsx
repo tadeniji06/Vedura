@@ -33,7 +33,7 @@ const Glimpse = () => {
         </h2>
         <p className='text-gray-600'>
           From tranquil pools to smart-enabled homes, every element of
-          Vendura is thoughtfully designed{" "}
+          Vedura is thoughtfully designed{" "}
           <br className='hidden md:block' />
           to elevate daily living into a resort-inspired experience.
         </p>

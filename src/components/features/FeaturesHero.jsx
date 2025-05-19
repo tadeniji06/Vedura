@@ -19,7 +19,7 @@ const FeaturesHero = () => {
         <div className='relative z-10 flex items-center justify-center min-h-[800px]'>
           <div className='flex flex-col gap-8 text-white items-center mt-[-180px] md:mt-0'>
             <h1 className='text-center md:text-6xl text-3xl font-medium'>
-              What to Expect at Vendura
+              What to Expect at Vedura
             </h1>
             <p className='text-center font-semibold text-lg'>
               A thoughtfully planned community where every detail - from

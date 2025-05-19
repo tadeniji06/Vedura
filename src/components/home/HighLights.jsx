@@ -75,7 +75,7 @@ const HighLights = () => {
         variants={itemVariants}
       >
         From lush gardens to smart home integration, every feature at
-        Vendura is thoughtfully crafted to elevate your everyday living.
+        Vedura is thoughtfully crafted to elevate your everyday living.
       </motion.p>
 
       <motion.div
@@ -85,7 +85,7 @@ const HighLights = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className='bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 p-4 flex flex-col  gap-3 group cursor-pointer'
+            className='bg-white hover:shadow-2xl transition-shadow duration-300 p-4 flex flex-col  gap-3 group cursor-pointer'
             variants={itemVariants}
             whileHover={{
               scale: 1.03,

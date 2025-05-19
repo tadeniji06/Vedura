@@ -105,7 +105,7 @@ const Welcome = () => {
           delay: 0.5,
         }}
       >
-        Welcome to Vendura
+        Welcome to Vedura
       </motion.span>
 
       {/* Description with subtle bounce */}
@@ -122,7 +122,7 @@ const Welcome = () => {
           delay: 1,
         }}
       >
-        Nestled in the heart of Arepo, Vendura offers a rare fusion of
+        Nestled in the heart of Arepo, Vedura offers a rare fusion of
         resort-style serenity and modern living. Thoughtfully crafted to
         inspire calm, comfort and connection.
       </motion.p>
