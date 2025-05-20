@@ -12,7 +12,7 @@ export const navLinks = [
     link: "/features",
   },
   {
-    name: "Project",
+    name: "Progress",
     link: "/project",
   },
   {
@@ -39,3 +39,5 @@ export const socials = [
     url: "",
   },
 ];
+
+export const formLink = "https://zfrmz.com/gZrym6NQIFUCZeIcRnAn";

@@ -2,6 +2,7 @@ import { navLinks } from "../utils/data";
 import { logo } from "../assets";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { formLink } from "../utils/data";
 
 const Header = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const Header = ({ className }) => {
 
           {/* CTA button */}
           <div className='hidden md:block'>
-            <Link to={"/contact"}>
+            <Link to={formLink}>
               <button
                 className='bg-white px-4 py-2 rounded-xl border shadow-xl 
               hover:bg-gray-200 transition-colors font-medium'
@@ -113,7 +114,7 @@ const Header = ({ className }) => {
               </Link>
             ))}
             <div className='px-3 pt-4'>
-              <Link to={"/contact"} onClick={toggleMenu}>
+              <Link to={formLink} onClick={toggleMenu}>
                 <button
                   className='bg-white w-full px-4 py-3 rounded-xl border shadow-xl 
                   hover:bg-gray-100 transition-colors text-slate-900 font-medium'

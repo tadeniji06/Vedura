@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { about } from "../../assets";
 import { motion } from "framer-motion";
+import { formLink } from "../../utils/data";
 
 const AboutSection = () => {
   return (
@@ -32,25 +34,32 @@ const AboutSection = () => {
         </span>
 
         <p className='text-sm md:text-base leading-relaxed text-gray-700'>
-          Vedura is more than a residence — it's a lifestyle vision thoughtfully crafted
-          for those who value elegance, peace, and purpose. Inspired by resort-style living
-          and grounded in natural beauty, Vedura blends refined architecture with calming
-          earth tones, lush landscapes, and intuitive design.
+          Vedura is more than a residence — it's a lifestyle vision
+          thoughtfully crafted for those who value elegance, peace, and
+          purpose. Inspired by resort-style living and grounded in natural
+          beauty, Vedura blends refined architecture with calming earth
+          tones, lush landscapes, and intuitive design.
         </p>
 
         <p className='text-sm md:text-base leading-relaxed text-gray-700'>
-          Each space within Vedura is designed to nurture well-being — from tranquil garden
-          paths to smart-enabled homes that simplify your everyday. It's a sanctuary for
-          modern living, rooted in nature, yet connected to everything you need.
+          Each space within Vedura is designed to nurture well-being — from
+          tranquil garden paths to smart-enabled homes that simplify your
+          everyday. It's a sanctuary for modern living, rooted in nature,
+          yet connected to everything you need.
         </p>
 
-        <motion.button
-          whileHover={{ scale: 1.05, boxShadow: "0px 0px 10px rgba(0, 128, 0, 0.4)" }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className='text-white bg-primary-green px-3 py-4 w-[220px] h-[55px] rounded-xl font-medium'
-        >
-          Be Among The First
-        </motion.button>
+        <Link to={formLink}>
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 10px rgba(0, 128, 0, 0.4)",
+            }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className='text-white bg-primary-green px-3 py-4 w-[220px] h-[55px] rounded-xl font-medium'
+          >
+            Be Among The First
+          </motion.button>
+        </Link>
       </motion.div>
     </section>
   );

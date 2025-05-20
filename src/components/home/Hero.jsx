@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { hero1, hero3 } from "../../assets";
 import Header from "../../layouts/Header";
 import { useEffect, useState } from "react";
+import { formLink } from "../../utils/data";
 
 const Hero = () => {
   const images = [hero1, hero3];
@@ -47,9 +49,11 @@ const Hero = () => {
               <br />
               nature in the heart of Arepo
             </p>
-            <button className='text-black bg-white px-4 py-4 rounded-3xl w-[270px] h-auto font-semibold'>
-              Secure Your Portion Of Earth
-            </button>
+            <Link to={formLink}>
+              <button className='text-black bg-white px-4 py-4 rounded-3xl w-[270px] h-auto font-semibold'>
+                Secure Your Portion Of Earth
+              </button>
+            </Link>
           </div>
         </div>
       </div>

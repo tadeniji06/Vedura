@@ -1,6 +1,8 @@
 import Header from "../../layouts/Header";
 import { aboutH } from "../../assets";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { formLink } from "../../utils/data";
 
 const AboutHero = () => {
   return (
@@ -34,9 +36,11 @@ const AboutHero = () => {
               curated response to the need for calm, beauty, and
               functionality in modern living.
             </p>
-            <button className='px-5 py-3 bg-white text-primary-green rounded-xl w-[200px] font-bold mx-auto md:mx-0'>
-              Be Among The First
-            </button>
+           <Link to={formLink}>
+              <button className='px-5 py-3 bg-white text-primary-green rounded-xl w-[200px] font-bold mx-auto md:mx-0'>
+                Be Among The First
+              </button>
+           </Link>
           </motion.div>
 
           {/* Right Image Block */}

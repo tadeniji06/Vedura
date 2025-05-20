@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { formLink } from "../../utils/data";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 80 },
@@ -44,13 +46,15 @@ const Waitlist = () => {
           rising in the heart of Arepo, where modern comfort meets timeless
           tranquility.
         </p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.96 }}
-          className='bg-white text-primary-green px-4 py-3 rounded-xl font-medium w-[160px] shadow hover:shadow-lg transition-all duration-300'
-        >
-          Join Waitlist
-        </motion.button>
+        <Link to={formLink}>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.96 }}
+            className='bg-white text-primary-green px-4 py-3 rounded-xl font-medium w-[160px] shadow hover:shadow-lg transition-all duration-300'
+          >
+            Join Waitlist
+          </motion.button>
+        </Link>
       </motion.div>
 
       {/* Right side */}
