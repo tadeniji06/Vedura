@@ -140,10 +140,10 @@ const ShowCase = () => {
               whileHover='hover'
               whileTap={{ scale: 0.98 }}
             />
-            {createOverlayText(
+            {/* {createOverlayText(
               imageContent[1].title,
               imageContent[1].description
-            )}
+            )} */}
           </div>
 
           <div className='relative group'>
@@ -155,10 +155,10 @@ const ShowCase = () => {
               whileHover='hover'
               whileTap={{ scale: 0.98 }}
             />
-            {createOverlayText(
+            {/* {createOverlayText(
               imageContent[2].title,
               imageContent[2].description
-            )}
+            )} */}
           </div>
         </motion.div>
 
