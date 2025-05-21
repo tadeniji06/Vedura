@@ -28,7 +28,7 @@ export const socials = [
   },
   {
     name: "Instagram",
-    url: "",
+    url: "https://www.instagram.com/veduraresort?igsh=MWw2NG92dHpzYTJwbw%3D%3D&utm_source=qr",
   },
   {
     name: "LinkedIn",

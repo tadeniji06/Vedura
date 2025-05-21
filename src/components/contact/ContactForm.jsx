@@ -10,7 +10,7 @@ const ContactForm = () => {
     },
     {
       icon: "mingcute:instagram-fill",
-      link: "",
+      link: "https://www.instagram.com/veduraresort?igsh=MWw2NG92dHpzYTJwbw%3D%3D&utm_source=qr",
     },
     {
       icon: "mdi:linkedin",
