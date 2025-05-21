@@ -48,15 +48,15 @@ const ShowCase = () => {
     },
     {
       src: c2,
-      title: "Everyday Feels Like a Getaway",
-      description:
-        "Lounge by the pool, stroll through curated gardens, or enjoy the communal spaces crafted for rest and recreation",
+      // title: "Everyday Feels Like a Getaway",
+      // description:
+      //   "Lounge by the pool, stroll through curated gardens, or enjoy the communal spaces crafted for rest and recreation",
     },
     {
       src: c3,
-      title: "Where Nature & Design Coexist",
-      description:
-        "Wake up to serene views, breathe fresh air, and live surrounded by the calming beauty of earth-toned landscapes.",
+      // title: "Where Nature & Design Coexist",
+      // description:
+      //   "Wake up to serene views, breathe fresh air, and live surrounded by the calming beauty of earth-toned landscapes.",
     },
     {
       src: c4,
