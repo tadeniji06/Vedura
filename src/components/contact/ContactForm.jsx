@@ -12,14 +12,6 @@ const ContactForm = () => {
       icon: "mingcute:instagram-fill",
       link: "https://www.instagram.com/veduraresort?igsh=MWw2NG92dHpzYTJwbw%3D%3D&utm_source=qr",
     },
-    {
-      icon: "mdi:linkedin",
-      link: "",
-    },
-    {
-      icon: "fa6-brands:square-x-twitter",
-      link: "",
-    },
   ];
 
   return (
@@ -35,25 +27,28 @@ const ContactForm = () => {
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className='w-full md:w-[500px] p-8 bg-gradient-to-br from-primary-green to-primary-green/60 flex flex-col gap-6 text-white rounded-xl shadow-lg'
+        className='w-full md:w-[500px] p-8 bg-gradient-to-br from-primary-green to-primary-green/60 flex flex-col gap-8 text-white rounded-xl shadow-lg'
       >
         <h1 className='text-3xl font-bold'>Get in Touch</h1>
 
         <div>
           <h2 className='text-xl font-semibold'>Visit Us:</h2>
-          <p>36, Casafina Street, Ojodu Berger, Lagos</p>
+          <p>1 Femi Deru Close, Ikeja Lagos</p>
         </div>
 
         <div>
           <h2 className='text-xl font-semibold'>Chat Us:</h2>
-          <p>Our friendly team is here to help</p>
-          <p>veduradevelopment@gmail.com</p>
+          <p>Rapid Response! Send a mail to get started</p>
+          <p>support@vedura.ng</p>
         </div>
 
         <div>
-          <h2 className='text-xl font-semibold'>Call Us:</h2>
+          <h2 className='text-xl font-semibold'>
+            Your Questions Answered: Connect with an Executive:
+          </h2>
           <p>Mon - Fri, 8am - 5pm</p>
-          <p>+234 689 578 6789</p>
+          <p>+234 9080702006</p>
+          <p>+234 8180000113</p>
         </div>
 
         <div className='flex flex-col gap-3'>
