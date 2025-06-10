@@ -34,18 +34,20 @@ const AboutSection = () => {
         </span>
 
         <p className='text-sm md:text-base leading-relaxed text-gray-700'>
-          Vedura is more than a residence — it's a lifestyle vision
-          thoughtfully crafted for those who value elegance, peace, and
-          purpose. Inspired by resort-style living and grounded in natural
-          beauty, Vedura blends refined architecture with calming earth
-          tones, lush landscapes, and intuitive design.
+          Vedura is not your typical land investment. It is a business and
+          family resort in the making-a masterfully planned off-plan
+          community that brings together business, comfort, nature, and
+          lifestyle. At Verdura, you do not just own land. You own a part
+          of something that is growing, evolving, and set to thrive.
         </p>
 
         <p className='text-sm md:text-base leading-relaxed text-gray-700'>
-          Each space within Vedura is designed to nurture well-being — from
-          tranquil garden paths to smart-enabled homes that simplify your
-          everyday. It's a sanctuary for modern living, rooted in nature,
-          yet connected to everything you need.
+          Today, that swamp is becoming a sanctuary - a thriving resort
+          town in the making, one that is set to be the perfect blend of
+          lifestyle. A space where families can live well, where businesses
+          can thrive, and where nature is not just preserved, but
+          celebrated. We are not just promising a resort. We are building
+          it.
         </p>
 
         <Link to={formLink}>

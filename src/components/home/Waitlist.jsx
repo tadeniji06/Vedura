@@ -41,10 +41,9 @@ const Waitlist = () => {
           Opportunities Available
         </span>
         <p className='text-base md:text-lg leading-relaxed'>
-          An exclusive resort-inspired residence is{" "}
-          <br className='hidden md:block' />
-          rising in the heart of Arepo, where modern comfort meets timeless
-          tranquility.
+          This is a long-term vision, not a short-term flip. It is a story
+          of transformation, from swamp to sanctuary. From overlooked to
+          unforgettable. And we want you to be a part of it.
         </p>
         <Link to={formLink}>
           <motion.button

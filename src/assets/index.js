@@ -5,6 +5,10 @@ import c1 from "./c1.png";
 import c2 from "./c2.png";
 import c3 from "./c3.png";
 import c4 from "./c4.png";
+import c5 from "./c5.png";
+import c6 from "./c6.png";
+import c7 from "./c7.png";
+import c8 from "./c8.png";
 import hyt1 from "./hyt1.png";
 import hyt2 from "./hyt2.png";
 import hyt3 from "./hyt3.png";
@@ -26,11 +30,41 @@ import eng from "./eng.jpg";
 import plan from "./plan.jpg";
 import pherov from "./vid.mp4";
 import tour from "./tourVid.mp4";
+import lo from "./lo.png";
+import tg from "./tg.png";
 import b1 from "./b1.jpg";
 import b2 from "./b2.jpg";
 import b3 from "./b3.jpg";
+import hero9 from "./hero9.png";
+import inv from "./inv.png";
+import land from "./land.png";
+import legacy from "./legacy.png";
+import spa from "./spa.jpg";
+import polo from "./polo.png";
+import cas from "./cas.png";
+import chop from "./chop.png";
+import buzz from "./buzz.png";
+import fer from "./fer.png";
+import ruz from "./ruz.png";
+import cuz from "./cuz.jpg";
+import huz from "./huz.png";
 export {
   logo,
+  ruz,
+  cuz,
+  huz,
+  buzz,
+  fer,
+  lo,
+  tg,
+  polo,
+  cas,
+  chop,
+  spa,
+  land,
+  legacy,
+  inv,
+  hero9,
   b1,
   b2,
   b3,
@@ -48,6 +82,10 @@ export {
   c2,
   c3,
   c4,
+  c5,
+  c6,
+  c7,
+  c8,
   hyt1,
   hyt2,
   hyt3,

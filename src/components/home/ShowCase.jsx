@@ -1,4 +1,4 @@
-import { c1, c2, c3, c4 } from "../../assets";
+import { c1, c2, c3, c4, c5, c6, c7, c8 } from "../../assets";
 import { motion } from "motion/react";
 
 const ShowCase = () => {
@@ -41,25 +41,25 @@ const ShowCase = () => {
   // Define unique content for each image
   const imageContent = [
     {
-      src: c1,
+      src: c5,
       title: "Smart Living, Simplified",
       description:
         "Experince intuitive control with integrated technology from climate and lighting to security and entertainment",
     },
     {
-      src: c2,
-      // title: "Everyday Feels Like a Getaway",
-      // description:
-      //   "Lounge by the pool, stroll through curated gardens, or enjoy the communal spaces crafted for rest and recreation",
+      src: c6,
+      title: "Everyday Feels Like a Getaway",
+      description:
+        "Lounge by the pool, stroll through curated gardens, or enjoy the communal spaces crafted for rest and recreation",
     },
     {
-      src: c3,
-      // title: "Where Nature & Design Coexist",
-      // description:
-      //   "Wake up to serene views, breathe fresh air, and live surrounded by the calming beauty of earth-toned landscapes.",
+      src: c7,
+      title: "Where Nature & Design Coexist",
+      description:
+        "Wake up to serene views, breathe fresh air, and live surrounded by the calming beauty of earth-toned landscapes.",
     },
     {
-      src: c4,
+      src: c8,
       title: "Value That Grows With Time",
       description:
         "Own a part of tomorrow in a premium off-plan development poised for growth, security, and lasting returns.",
@@ -94,11 +94,11 @@ const ShowCase = () => {
           className='font-medium text-sm md:text-xl text-center max-w-3xl'
           variants={itemVariants}
         >
-          From lush gardens to smart home integration, every feature at{" "}
+          A space where families can live well, where businesses can thrive,
           <span className='hidden md:inline'>
             <br />
           </span>
-          Vedura is thoughtfully crafted to elevate your everyday living.
+          and where nature is not preserved, but celebrated.
         </motion.p>
       </motion.div>
 

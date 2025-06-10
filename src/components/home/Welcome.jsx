@@ -122,9 +122,10 @@ const Welcome = () => {
           delay: 1,
         }}
       >
-        Nestled in the heart of Arepo, Vedura offers a rare fusion of
-        resort-style serenity and modern living. Thoughtfully crafted to
-        inspire calm, comfort and connection.
+        Vedura is not your typical land investment. It is a business and
+        family resort in the making-a masterfully planned off-plan
+        community that brings together business, comfort, nature, and
+        lifestyle.
       </motion.p>
 
       {/* Button with playful continuous bounce */}
@@ -150,7 +151,6 @@ const Welcome = () => {
       {/* Background container bounce */}
       <motion.div
         className='absolute inset-0 pointer-events-none'
-     
         transition={{
           duration: 3,
           repeat: Infinity,
