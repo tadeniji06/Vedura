@@ -1,4 +1,4 @@
-import { c1, c2, c3, c4, c5, c6, c7, c8 } from "../../assets";
+import { c5, c6, c7, c8 } from "../../assets";
 import { motion } from "motion/react";
 
 const ShowCase = () => {
@@ -8,32 +8,23 @@ const ShowCase = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.5,
+        delayChildren: 0.3,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, y: 40, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
-    },
     hover: {
-      scale: 1.05,
-      y: -5,
+      scale: 1.02,
       transition: { duration: 0.3, ease: "easeOut" },
     },
   };
@@ -44,172 +35,150 @@ const ShowCase = () => {
       src: c5,
       title: "Smart Living, Simplified",
       description:
-        "Experince intuitive control with integrated technology from climate and lighting to security and entertainment",
+        "Experience intuitive control with integrated technology from climate and lighting to security and entertainment",
+      color: "bg-primary-green",
     },
     {
       src: c6,
       title: "Everyday Feels Like a Getaway",
       description:
         "Lounge by the pool, stroll through curated gardens, or enjoy the communal spaces crafted for rest and recreation",
+      color: "bg-primary-green",
     },
     {
       src: c7,
       title: "Where Nature & Design Coexist",
       description:
         "Wake up to serene views, breathe fresh air, and live surrounded by the calming beauty of earth-toned landscapes.",
+      color: "bg-primary-green",
     },
     {
       src: c8,
       title: "Value That Grows With Time",
       description:
         "Own a part of tomorrow in a premium off-plan development poised for growth, security, and lasting returns.",
+      color: "bg-primary-green",
     },
   ];
 
-  const createOverlayText = (title, description) => (
-    <div className='absolute bottom-0 left-0 right-0 h-1/2 flex flex-col gap-2 md:gap-4 justify-center items-center text-white backdrop-blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 md:p-4 text-center rounded-b-lg'>
-      <span className='text-base md:text-xl font-semibold'>{title}</span>
-      <p className='text-xs md:text-sm leading-relaxed'>{description}</p>
-    </div>
+  const ImageCard = ({ content, index, className = "" }) => (
+    <motion.div
+      className={`relative ${className}`}
+      variants={itemVariants}
+    >
+      {/* Image */}
+      <motion.div
+        className="relative overflow-hidden rounded-2xl shadow-lg"
+        variants={imageVariants}
+        whileHover="hover"
+      >
+        <img
+          className="w-full h-full object-cover"
+          src={content.src}
+          alt={`Vendura showcase - ${content.title}`}
+        />
+        {/* Subtle overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+      </motion.div>
+
+      {/* Label Card */}
+      <motion.div
+        className={`${content.color} text-white p-4 md:p-6 rounded-2xl shadow-xl mt-4 hover:shadow-2xl transition-shadow duration-300`}
+        whileHover={{ y: -2 }}
+      >
+        <h3 className="font-bold text-lg md:text-xl mb-2">
+          {content.title}
+        </h3>
+        <p className="text-sm md:text-base text-white/90 leading-relaxed">
+          {content.description}
+        </p>
+      </motion.div>
+    </motion.div>
   );
 
   return (
-    <motion.div
-      className='py-8 md:py-16 md:px-16 px-4 flex flex-col justify-center items-center'
-      initial='hidden'
-      whileInView='visible'
+    <motion.section
+      className="py-16 md:py-20 px-4 bg-gradient-to-b from-white to-primary-peach/5"
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <motion.div
-        className='flex flex-col gap-4 mb-8 md:mb-12'
-        variants={containerVariants}
-      >
-        <motion.h1
-          className='text-primary-green font-bold md:text-4xl text-center text-2xl'
-          variants={itemVariants}
-        >
-          A Curated Blend Of Nature, Design, and Comfort
-        </motion.h1>
-        <motion.p
-          className='font-medium text-sm md:text-xl text-center max-w-3xl'
-          variants={itemVariants}
-        >
-          A space where families can live well, where businesses can thrive,
-          <span className='hidden md:inline'>
-            <br />
-          </span>
-          and where nature is not preserved, but celebrated.
-        </motion.p>
-      </motion.div>
-
-      {/* Desktop layout */}
-      <motion.div
-        className='hidden md:flex items-center gap-6 lg:gap-8 justify-center w-full max-w-6xl'
-        variants={containerVariants}
-      >
-        {/* Left column */}
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
-          variants={itemVariants}
-          className='flex-1 max-w-sm relative group'
+          className="text-center mb-12 md:mb-16"
+          variants={containerVariants}
         >
-          <motion.img
-            className='w-full h-auto object-cover shadow-md rounded-lg'
-            src={imageContent[0].src}
-            alt='Vendura showcase image 1'
-            variants={imageVariants}
-            whileHover='hover'
-            whileTap={{ scale: 0.98 }}
-          />
-          {createOverlayText(
-            imageContent[0].title,
-            imageContent[0].description
-          )}
-        </motion.div>
-
-        {/* Center column with 2 stacked images */}
-        <motion.div
-          className='flex flex-col gap-2 lg:gap-4 flex-1 max-w-sm'
-          variants={itemVariants}
-        >
-          <div className='relative group'>
-            <motion.img
-              className='w-full h-auto object-cover shadow-md rounded-lg'
-              src={imageContent[1].src}
-              alt='Vendura showcase image 2'
-              variants={imageVariants}
-              whileHover='hover'
-              whileTap={{ scale: 0.98 }}
-            />
-            {/* {createOverlayText(
-              imageContent[1].title,
-              imageContent[1].description
-            )} */}
-          </div>
-
-          <div className='relative group'>
-            <motion.img
-              className='w-full h-auto object-cover shadow-md rounded-lg'
-              src={imageContent[2].src}
-              alt='Vendura showcase image 3'
-              variants={imageVariants}
-              whileHover='hover'
-              whileTap={{ scale: 0.98 }}
-            />
-            {/* {createOverlayText(
-              imageContent[2].title,
-              imageContent[2].description
-            )} */}
-          </div>
-        </motion.div>
-
-        {/* Right column */}
-        <motion.div
-          variants={itemVariants}
-          className='flex-1 max-w-sm relative group'
-        >
-          <motion.img
-            className='w-full h-auto object-cover shadow-md rounded-lg'
-            src={imageContent[3].src}
-            alt='Vendura showcase image 4'
-            variants={imageVariants}
-            whileHover='hover'
-            whileTap={{ scale: 0.98 }}
-          />
-          {createOverlayText(
-            imageContent[3].title,
-            imageContent[3].description
-          )}
-        </motion.div>
-      </motion.div>
-
-      {/* Mobile layout */}
-      <motion.div
-        className='md:hidden grid grid-cols-2 gap-4 w-full max-w-md'
-        variants={containerVariants}
-      >
-        {imageContent.map((content, idx) => (
-          <motion.div
-            key={idx}
-            className={`relative group ${
-              idx === 0 || idx === 3 ? "col-span-2" : ""
-            }`}
+          <motion.h2
+            className="text-primary-green font-bold text-3xl md:text-5xl mb-6"
             variants={itemVariants}
           >
-            <motion.img
-              className={`w-full ${
-                idx === 0 || idx === 3 ? "h-48 sm:h-56" : "h-40 sm:h-48"
-              } object-cover shadow-md rounded-lg`}
-              src={content.src}
-              alt={`Vendura showcase image ${idx + 1}`}
-              variants={imageVariants}
-              whileHover='hover'
-              whileTap={{ scale: 0.98 }}
+            A Curated Blend Of Nature, Design, and Comfort
+          </motion.h2>
+          <motion.p
+            className="text-gray-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed"
+            variants={itemVariants}
+          >
+            A space where families can live well, where businesses can thrive,
+            and where nature is not preserved, but celebrated.
+          </motion.p>
+        </motion.div>
+
+        {/* Desktop Layout */}
+        <motion.div
+          className="hidden lg:grid lg:grid-cols-3 gap-8 xl:gap-12"
+          variants={containerVariants}
+        >
+          {/* Left Column - Single large card */}
+          <ImageCard
+            content={imageContent[0]}
+            index={0}
+            className="lg:row-span-2"
+          />
+
+          {/* Middle Column - Two stacked cards */}
+          <div className="space-y-8">
+            <ImageCard content={imageContent[1]} index={1} />
+            <ImageCard content={imageContent[2]} index={2} />
+          </div>
+
+          {/* Right Column - Single large card */}
+          <ImageCard
+            content={imageContent[3]}
+            index={3}
+            className="lg:row-span-2"
+          />
+        </motion.div>
+
+        {/* Tablet Layout */}
+        <motion.div
+          className="hidden md:grid md:grid-cols-2 lg:hidden gap-8"
+          variants={containerVariants}
+        >
+          {imageContent.map((content, index) => (
+            <ImageCard
+              key={index}
+              content={content}
+              index={index}
             />
-            {createOverlayText(content.title, content.description)}
-          </motion.div>
-        ))}
-      </motion.div>
-    </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Mobile Layout */}
+        <motion.div
+          className="md:hidden space-y-8"
+          variants={containerVariants}
+        >
+          {imageContent.map((content, index) => (
+            <ImageCard
+              key={index}
+              content={content}
+              index={index}
+            />
+          ))}
+        </motion.div>
+      </div>
+    </motion.section>
   );
 };
 
