@@ -54,10 +54,10 @@ const WhoisVeduraFor = () => {
             
             {/* Content */}
             <div className='p-6'>
-              <h3 className='text-primary-green text-2xl font-semibold mb-3 leading-tight'>
+              <h3 className='text-primary-green text-2xl font-semibold mb-3 leading-tight text-center'>
                 {opportunity.title}
               </h3>
-              <p className='text-gray-600 text-lg leading-relaxed'>
+              <p className='text-gray-600 text-lg leading-relaxed text-center'>
                 {opportunity.body}
               </p>
             </div>
