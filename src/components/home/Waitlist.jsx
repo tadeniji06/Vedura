@@ -269,7 +269,7 @@ const Waitlist = () => {
 
       {/* Right side - Video Player */}
       <motion.div
-        className='w-[300px] md:w-[520px] md:h-[350px] h-[150px]'
+        className='w-[400px] md:w-[520px] md:h-[350px] h-[300px]'
         variants={itemVariants}
       >
         <VideoPlayer 
