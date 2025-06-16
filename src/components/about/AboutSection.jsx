@@ -37,7 +37,7 @@ const AboutSection = () => {
           Vedura is not your typical land investment. It is a business and
           family resort in the making-a masterfully planned off-plan
           community that brings together business, comfort, nature, and
-          lifestyle. At Verdura, you do not just own land. You own a part
+          lifestyle. At Vedura, you do not just own land. You own a part
           of something that is growing, evolving, and set to thrive.
         </p>
 

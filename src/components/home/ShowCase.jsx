@@ -1,4 +1,4 @@
-import { c5, c6, c7, c8 } from "../../assets";
+import { c6, c7, c8 } from "../../assets";
 import { motion } from "motion/react";
 
 const ShowCase = () => {
@@ -29,15 +29,8 @@ const ShowCase = () => {
     },
   };
 
-  // Define unique content for each image
+  // Updated content with only 3 cards (removed the first one)
   const imageContent = [
-    {
-      src: c5,
-      title: "Smart Living, Simplified",
-      description:
-        "Experience intuitive control with integrated technology from climate and lighting to security and entertainment",
-      color: "bg-primary-green",
-    },
     {
       src: c6,
       title: "Everyday Feels Like a Getaway",
@@ -68,7 +61,7 @@ const ShowCase = () => {
     >
       {/* Image */}
       <motion.div
-        className="relative overflow-hidden rounded-2xl shadow-lg"
+        className="relative overflow-hidden rounded-2xl shadow-lg h-64 md:h-80"
         variants={imageVariants}
         whileHover="hover"
       >
@@ -124,35 +117,9 @@ const ShowCase = () => {
           </motion.p>
         </motion.div>
 
-        {/* Desktop Layout */}
+        {/* Desktop Layout - Clean 3-column grid */}
         <motion.div
           className="hidden lg:grid lg:grid-cols-3 gap-8 xl:gap-12"
-          variants={containerVariants}
-        >
-          {/* Left Column - Single large card */}
-          <ImageCard
-            content={imageContent[0]}
-            index={0}
-            className="lg:row-span-2"
-          />
-
-          {/* Middle Column - Two stacked cards */}
-          <div className="space-y-8">
-            <ImageCard content={imageContent[1]} index={1} />
-            <ImageCard content={imageContent[2]} index={2} />
-          </div>
-
-          {/* Right Column - Single large card */}
-          <ImageCard
-            content={imageContent[3]}
-            index={3}
-            className="lg:row-span-2"
-          />
-        </motion.div>
-
-        {/* Tablet Layout */}
-        <motion.div
-          className="hidden md:grid md:grid-cols-2 lg:hidden gap-8"
           variants={containerVariants}
         >
           {imageContent.map((content, index) => (
@@ -164,7 +131,29 @@ const ShowCase = () => {
           ))}
         </motion.div>
 
-        {/* Mobile Layout */}
+        {/* Tablet Layout - 2 columns with better spacing */}
+        <motion.div
+          className="hidden md:grid md:grid-cols-2 lg:hidden gap-8"
+          variants={containerVariants}
+        >
+          {/* First two cards */}
+          {imageContent.slice(0, 2).map((content, index) => (
+            <ImageCard
+              key={index}
+              content={content}
+              index={index}
+            />
+          ))}
+          {/* Third card centered */}
+          <div className="md:col-span-2 max-w-md mx-auto">
+            <ImageCard
+              content={imageContent[2]}
+              index={2}
+            />
+          </div>
+        </motion.div>
+
+        {/* Mobile Layout - Single column */}
         <motion.div
           className="md:hidden space-y-8"
           variants={containerVariants}
