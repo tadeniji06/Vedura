@@ -29,6 +29,7 @@ import p4 from "./p4.jpg";
 import eng from "./eng.jpg";
 import plan from "./plan.jpg";
 import pherov from "./vid.mp4";
+import prev from "./prev.mp4";
 import tour from "./tourVid.mp4";
 import lo from "./lo.png";
 import tg from "./tg.png";
@@ -50,6 +51,7 @@ import cuz from "./cuz.jpg";
 import huz from "./huz.png";
 export {
   logo,
+  prev,
   ruz,
   cuz,
   huz,
