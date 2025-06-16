@@ -21,7 +21,7 @@ const itemVariants = {
 const Footer = () => {
   return (
     <motion.footer
-      className='bg-primary-green mt-10 px-6 py-10 flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-24 2xl:gap-32 md:px-12 lg:px-16 xl:px-24 2xl:px-32 max-w-7xl mx-auto'
+      className='bg-primary-green mt-10 px-6 py-10 flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-24 2xl:gap-32 md:px-12 lg:px-16 xl:px-24 2xl:px-32 max-w-full mx-auto'
       variants={containerVariants}
       initial='hidden'
       whileInView='visible'
