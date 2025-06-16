@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const WhyInvest = () => {
   const ref = useRef(null);
@@ -12,37 +13,39 @@ const WhyInvest = () => {
       title: "Guaranteed 70% ROI",
       description:
         "Secure your financial future with our proven track record of exceptional returns on investment.",
-      icon: "📈",
+      icon: "mdi:trending-up",
       percentage: "70%",
       gradient: "from-primary-green to-primary-peach",
-      bgGradient: "from-primary-green/5 to-primary-peach/10",
-      shadowColor: "shadow-primary-green/25",
+      bgGradient: "from-white via-primary-green/15 to-primary-peach/12",
+      shadowColor: "shadow-primary-green/30",
       stats: "Average Annual Return",
+      iconColor: "text-white",
     },
     {
       id: 2,
       title: "First of its kind on the mainland",
       description:
         "Be part of a groundbreaking development that sets new standards for luxury living and investment opportunities.",
-      icon: "🏆",
+      icon: "mdi:trophy-award",
       percentage: "1st",
       gradient: "from-primary-peach to-primary-green",
-      bgGradient: "from-primary-peach/10 to-primary-green/5",
-      shadowColor: "shadow-primary-peach/25",
+      bgGradient: "from-white via-primary-green/15 to-primary-peach/12",
+      shadowColor: "shadow-primary-peach/30",
       stats: "Pioneer Development",
+      iconColor: "text-white",
     },
     {
       id: 3,
       title: "Perfect location for your business",
       description:
         "Strategic positioning with excellent connectivity, infrastructure, and growth potential for commercial ventures.",
-      icon: "🎯",
+      icon: "mdi:map-marker-radius",
       percentage: "15min",
       gradient: "from-primary-green via-primary-peach to-primary-green",
-      bgGradient:
-        "from-primary-green/10 via-primary-peach/5 to-primary-green/10",
-      shadowColor: "shadow-primary-green/20",
+      bgGradient: "from-white via-primary-green/15 to-primary-peach/12",
+      shadowColor: "shadow-primary-green/25",
       stats: "From CBD Alausa",
+      iconColor: "text-white",
     },
   ];
 
@@ -94,21 +97,10 @@ const WhyInvest = () => {
     },
   };
 
-  const pulseVariants = {
-    animate: {
-      scale: [1, 1.05, 1],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <motion.section
       ref={ref}
-      className='py-20 px-4 bg-gradient-to-br from-slate-50 via-white to-primary-peach/5 relative overflow-hidden'
+      className='py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-primary-peach/8 relative overflow-hidden'
       variants={containerVariants}
       initial='hidden'
       animate={isInView ? "visible" : "hidden"}
@@ -116,10 +108,10 @@ const WhyInvest = () => {
       {/* Background Elements */}
       <div className='absolute inset-0 overflow-hidden'>
         <motion.div
-          className='absolute top-20 left-10 w-72 h-72 bg-primary-green/5 rounded-full blur-3xl'
+          className='absolute top-20 left-10 w-72 h-72 bg-primary-green/8 rounded-full blur-3xl'
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
+            opacity: [0.4, 0.6, 0.4],
           }}
           transition={{
             duration: 8,
@@ -128,10 +120,10 @@ const WhyInvest = () => {
           }}
         />
         <motion.div
-          className='absolute bottom-20 right-10 w-96 h-96 bg-primary-peach/10 rounded-full blur-3xl'
+          className='absolute bottom-20 right-10 w-96 h-96 bg-primary-peach/12 rounded-full blur-3xl'
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.2, 0.4, 0.2],
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 10,
@@ -151,7 +143,6 @@ const WhyInvest = () => {
             className='inline-flex items-center gap-3 mb-6'
             whileHover={{ scale: 1.05 }}
           >
-          
             <motion.h2
               className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary-green to-primary-peach bg-clip-text text-transparent'
               whileHover={{
@@ -165,7 +156,7 @@ const WhyInvest = () => {
           </motion.div>
 
           <motion.p
-            className='text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed'
+            className='text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium'
             initial={{ opacity: 0, y: 20 }}
             animate={
               isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -175,21 +166,21 @@ const WhyInvest = () => {
             At Vedura, you don't just own land. You own a part of something
             that is{" "}
             <motion.span
-              className='text-primary-green font-semibold'
+              className='text-primary-green font-bold'
               whileHover={{ scale: 1.1, color: "#ddd1b4" }}
             >
               growing
             </motion.span>
             ,{" "}
             <motion.span
-              className='text-primary-green font-semibold'
+              className='text-primary-green font-bold'
               whileHover={{ scale: 1.1, color: "#ddd1b4" }}
             >
               evolving
             </motion.span>
             , and set to{" "}
             <motion.span
-              className='text-primary-green font-semibold'
+              className='text-primary-green font-bold'
               whileHover={{ scale: 1.1, color: "#ddd1b4" }}
             >
               thrive
@@ -211,11 +202,17 @@ const WhyInvest = () => {
             >
               {/* Card Background */}
               <motion.div
-                className={`relative p-8 rounded-3xl bg-gradient-to-br ${reason.bgGradient} border border-primary-peach/20 backdrop-blur-sm ${reason.shadowColor} transition-all duration-500`}
+                className={`relative p-8 rounded-3xl bg-gradient-to-br ${reason.bgGradient} border border-primary-green/15 backdrop-blur-sm shadow-xl transition-all duration-500`}
                 whileHover={{
-                  boxShadow: "0 25px 50px -12px rgba(30, 61, 54, 0.15)",
+                  boxShadow: "0 25px 50px -12px rgba(30, 61, 54, 0.2)",
                   scale: 1.02,
-                  borderColor: "#ddd1b4",
+                  borderColor: "rgba(30, 61, 54, 0.3)",
+                }}
+                style={{
+                  background:
+                    hoveredCard === reason.id
+                      ? `linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(30,61,54,0.08) 50%, rgba(221,209,180,0.12) 100%)`
+                      : undefined,
                 }}
               >
                 {/* Floating Icon */}
@@ -225,14 +222,17 @@ const WhyInvest = () => {
                   animate='animate'
                 >
                   <motion.div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${reason.gradient} flex items-center justify-center text-2xl shadow-lg`}
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${reason.gradient} flex items-center justify-center shadow-lg border border-white/20`}
                     whileHover={{
                       rotate: [0, -10, 10, 0],
                       scale: 1.1,
                     }}
                     transition={{ duration: 0.5 }}
                   >
-                    {reason.icon}
+                    <Icon
+                      icon={reason.icon}
+                      className={`text-3xl ${reason.iconColor} drop-shadow-sm`}
+                    />
                   </motion.div>
                 </motion.div>
 
@@ -251,7 +251,7 @@ const WhyInvest = () => {
                   >
                     {reason.percentage}
                   </motion.div>
-                  <div className='text-sm text-primary-green/70 font-medium'>
+                  <div className='text-sm text-primary-green/80 font-semibold'>
                     {reason.stats}
                   </div>
                 </motion.div>
@@ -261,17 +261,19 @@ const WhyInvest = () => {
                   <motion.h3
                     className='text-2xl font-bold text-primary-green mb-4 leading-tight'
                     whileHover={{ color: "#ddd1b4" }}
+                    transition={{ duration: 0.2 }}
                   >
                     {reason.title}
                   </motion.h3>
 
                   <motion.p
-                    className='text-gray-600 leading-relaxed mb-6'
+                    className='text-gray-700 leading-relaxed mb-6 font-medium'
                     animate={
                       hoveredCard === reason.id
-                        ? { opacity: 1 }
-                        : { opacity: 0.8 }
+                        ? { opacity: 1, color: "#374151" }
+                        : { opacity: 0.85, color: "#4b5563" }
                     }
+                    transition={{ duration: 0.3 }}
                   >
                     {reason.description}
                   </motion.p>
@@ -279,17 +281,34 @@ const WhyInvest = () => {
 
                 {/* Card border glow */}
                 <motion.div
-                  className='absolute inset-0 rounded-3xl'
+                  className='absolute inset-0 rounded-3xl pointer-events-none'
                   animate={
                     hoveredCard === reason.id
                       ? {
-                          boxShadow: "0 0 30px rgba(30, 61, 54, 0.2)",
+                          boxShadow:
+                            "inset 0 0 0 2px rgba(30, 61, 54, 0.2), 0 0 30px rgba(30, 61, 54, 0.15)",
                         }
                       : {
-                          boxShadow: "0 0 0px rgba(0, 0, 0, 0)",
+                          boxShadow:
+                            "inset 0 0 0 1px rgba(30, 61, 54, 0.1), 0 0 0px rgba(0, 0, 0, 0)",
                         }
                   }
                   transition={{ duration: 0.3 }}
+                />
+
+                {/* Subtle shine effect */}
+                <motion.div
+                  className='absolute inset-0 rounded-3xl opacity-0 pointer-events-none'
+                  animate={
+                    hoveredCard === reason.id
+                      ? {
+                          opacity: 1,
+                          background:
+                            "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(221,209,180,0.1) 100%)",
+                        }
+                      : { opacity: 0 }
+                  }
+                  transition={{ duration: 0.4 }}
                 />
               </motion.div>
             </motion.div>

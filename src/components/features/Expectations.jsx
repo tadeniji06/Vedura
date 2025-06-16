@@ -37,9 +37,9 @@ const Expectations = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-bold text-4xl md:text-5xl text-primary-green mb-6">
+          {/* <h2 className="font-bold text-4xl md:text-5xl text-primary-green mb-6">
             Other Features in Vedura
-          </h2>
+          </h2> */}
           <p className="text-gray-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
             From tranquil pools to smart-enabled homes, every element of Vedura is thoughtfully designed to elevate daily living into a resort-inspired experience.
           </p>
@@ -76,7 +76,7 @@ const Expectations = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              {/* <div className="p-6">
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {perk.body}
                 </p>
@@ -84,13 +84,13 @@ const Expectations = () => {
                 <button className="w-full bg-primary-green text-white py-3 rounded-full font-semibold hover:bg-primary-green/90 transition-colors duration-300">
                   Learn More
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
 
         {/* Bottom Section */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="bg-primary-green/5 rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-primary-green mb-4">
               Experience Unmatched Luxury
@@ -102,7 +102,7 @@ const Expectations = () => {
               Explore All Amenities
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

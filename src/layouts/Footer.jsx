@@ -81,34 +81,14 @@ const Footer = () => {
         <div className='flex flex-wrap gap-8 lg:gap-12 xl:gap-16 text-white'>
           <div className='flex flex-col gap-2 min-w-[120px]'>
             <p className='font-bold text-base md:text-lg mb-1'>News</p>
-            <Link 
-              to='#' 
-              className='hover:underline text-sm md:text-base transition-all duration-200 hover:text-gray-200'
-            >
-              Why Arepo?
-            </Link>
-            <Link 
-              to='#' 
+
+            <Link
+              to='/features'
               className='hover:underline text-sm md:text-base transition-all duration-200 hover:text-gray-200'
             >
               Why Vedura?
             </Link>
           </div>
-          
-        
-        </div>
-
-        {/* Legal Links */}
-        <div className='flex flex-wrap gap-4 lg:gap-6 text-white text-sm md:text-base'>
-          <p className='hover:underline cursor-pointer transition-all duration-200 hover:text-gray-200'>
-            Terms & Conditions
-          </p>
-          <p className='hover:underline cursor-pointer transition-all duration-200 hover:text-gray-200'>
-            Cookie Policy
-          </p>
-          <p className='hover:underline cursor-pointer transition-all duration-200 hover:text-gray-200'>
-            Privacy Policy
-          </p>
         </div>
       </motion.div>
     </motion.footer>
