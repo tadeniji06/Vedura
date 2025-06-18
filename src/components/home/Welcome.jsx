@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-
+import { Link } from "react-router-dom";
 const Welcome = () => {
   // Bouncy spring configuration
   const bounceSpring = {
@@ -145,7 +145,7 @@ const Welcome = () => {
           delay: 1.5,
         }}
       >
-        Learn More
+        <Link to={"/project"}> Learn More</Link>
       </motion.button>
 
       {/* Background container bounce */}

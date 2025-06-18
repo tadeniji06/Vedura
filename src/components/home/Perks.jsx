@@ -1,7 +1,6 @@
 import { polo, cas, chop } from "../../assets";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import { formLink } from "../../utils/data";
 
 const Perks = () => {
@@ -273,41 +272,7 @@ const Perks = () => {
                 </motion.p>
 
                 {/* CTA Button */}
-                <Link to={formLink} target='_blank'>
-                  <motion.button
-                    className={`bg-gradient-to-r ${perk.gradient} text-white px-6 py-3 rounded-full font-semibold shadow-lg backdrop-blur-sm border border-white/20`}
-                    variants={buttonVariants}
-                    whileHover={{
-                      boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
-                      y: -2,
-                    }}
-                    whileTap='tap'
-                  >
-                    <motion.span
-                      className='flex items-center gap-2'
-                      whileHover={{ x: 5 }}
-                    >
-                      Join Waitlist
-                      <motion.span
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                      >
-                        →
-                      </motion.span>
-                    </motion.span>
-                  </motion.button>
-                </Link>
               </motion.div>
-
-              {/* Shine Effect */}
-              <motion.div
-                className='absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12'
-                initial={{ x: "-100%" }}
-                animate={
-                  hoveredCard === perk.id ? { x: "100%" } : { x: "-100%" }
-                }
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-              />
 
               {/* Border Glow Effect */}
               <motion.div
@@ -340,7 +305,7 @@ const Perks = () => {
           >
             Ready to experience luxury redefined?
           </motion.p>
-          <Link to={formLink} target='_blank'>
+          <a href={formLink} target='_blank' rel='noopener noreferrer'>
             <motion.button
               className='bg-primary-green text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl'
               whileHover={{
@@ -367,7 +332,7 @@ const Perks = () => {
                 </motion.span>
               </motion.span>
             </motion.button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </motion.section>

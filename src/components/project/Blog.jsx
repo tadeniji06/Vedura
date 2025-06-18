@@ -100,7 +100,7 @@ const Blog = () => {
               <h3 className="text-xl font-bold mb-3 text-gray-900">{blog.title}</h3>
               <p className="text-gray-600 mb-4 flex-grow">{blog.desc}</p>
               
-              <motion.button 
+              {/* <motion.button 
                 className="flex items-center text-primary-green font-medium mt-2"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 400 }}
@@ -120,13 +120,13 @@ const Blog = () => {
                     d="M14 5l7 7m0 0l-7 7m7-7H3" 
                   />
                 </svg>
-              </motion.button>
+              </motion.button> */}
             </div>
           </motion.div>
         ))}
       </motion.div>
       
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.5 }}
@@ -139,7 +139,7 @@ const Blog = () => {
         >
           View All Articles
         </motion.button>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
