@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { formLink } from "../../utils/data";
+import { Link } from "react-router-dom";
 const Clusters = () => {
 	const [activeTab, setActiveTab] = useState(
 		"residential"
@@ -160,13 +161,23 @@ const Clusters = () => {
 										{cluster.status ===
 											"Available" && (
 											<button className='w-full bg-primary-green text-white py-3 rounded-full font-semibold hover:bg-primary-green/90 transition-colors duration-300'>
-												Select This Zone
+												<Link
+													to={formLink}
+													target='_blank'
+												>
+													Select This Zone
+												</Link>
 											</button>
 										)}
 										{cluster.status ===
 											"UnAvailable" && (
 											<button className='w-full bg-primary-green text-white py-3 rounded-full font-semibold hover:bg-primary-green/90 transition-colors duration-300'>
-												Join The Waitlist
+												<Link
+													to={formLink}
+													target='_blank'
+												>
+													Join The Waitlist
+												</Link>
 											</button>
 										)}
 									</div>
@@ -225,7 +236,12 @@ const Clusters = () => {
 										</div>
 
 										<button className='w-full bg-primary-green text-white py-3 rounded-full font-semibold hover:bg-primary-green/90 transition-colors duration-300'>
-											Join The Waitlist
+											<Link
+												to={formLink}
+												target='_blank'
+											>
+												Join The Waitlist
+											</Link>
 										</button>
 									</div>
 								)
