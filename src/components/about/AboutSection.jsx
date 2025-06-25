@@ -29,11 +29,11 @@ const AboutSection = () => {
         viewport={{ once: true }}
         className='flex flex-col gap-6 lg:gap-12 max-w-[600px]'
       >
-        <span className='font-bold text-xl lg:text-2xl text-primary-green'>
+        <span className='font-bold text-xl lg:text-3xl text-primary-green'>
           Where Calm Meets Contemporary Living
         </span>
 
-        <p className='text-sm md:text-base leading-relaxed text-gray-700'>
+        <p className='text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700'>
           Vedura is not your typical land investment. It is a business and
           family resort in the making-a masterfully planned off-plan
           community that brings together business, comfort, nature, and
@@ -41,7 +41,7 @@ const AboutSection = () => {
           of something that is growing, evolving, and set to thrive.
         </p>
 
-        <p className='text-sm md:text-base leading-relaxed text-gray-700'>
+        <p className='text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700'>
           Today, that swamp is becoming a sanctuary - a thriving resort
           town in the making, one that is set to be the perfect blend of
           lifestyle. A space where families can live well, where businesses

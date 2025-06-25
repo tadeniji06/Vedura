@@ -1,25 +1,25 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { b1, b2, b3 } from "../../assets";
+import { b1, b2, b3, goo, hrs, hyt1 } from "../../assets";
 
 const Blog = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const blogs = [
     {
-      image: b1,
+      image: hrs,
       title: "Rising Into Reality",
       desc: "Walls are going up and the vision is coming to life as structural work advances across the site.",
       date: "May 12, 2025"
     },
     {
-      image: b2,
+      image: hyt1,
       title: "Details That Define Living",
       desc: "From refined finishes to smart integrations, every element is now crafted to reflect luxury, comfort, and calm.",
       date: "May 5, 2025"
     },
     {
-      image: b3,
+      image: goo,
       title: "Designing the Future",
       desc: "Our architectural plans are now finalized, blending form, function, and nature to create timeless spaces.",
       date: "April 28, 2025"

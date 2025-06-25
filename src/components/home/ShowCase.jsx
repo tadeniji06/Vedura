@@ -79,7 +79,7 @@ const ShowCase = () => {
         className={`${content.color} text-white p-4 md:p-6 rounded-2xl shadow-xl mt-4 hover:shadow-2xl transition-shadow duration-300`}
         whileHover={{ y: -2 }}
       >
-        <h3 className="font-bold text-lg md:text-xl mb-2 text-center">
+        <h3 className="font-bold text-lg md:text-xl mb-2 leading-relaxed text-center">
           {content.title}
         </h3>
         <p className="text-sm md:text-base text-white/90 leading-relaxed text-center">

@@ -68,7 +68,7 @@ const Hero = () => {
           <div className='flex flex-col gap-8 text-white items-center mt-[-180px] md:mt-0 px-4'>
             <h1 className='text-center md:text-6xl text-3xl font-medium'>
               Vedura Resort <br />
-              Escape. Connect. Thrive
+              <p className="text-3xl">Escape. Connect. Thrive</p>
             </h1>
             <p className='text-center font-semibold text-lg'>
               You deserve more than survival

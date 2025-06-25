@@ -49,8 +49,16 @@ import fer from "./fer.png";
 import ruz from "./ruz.png";
 import cuz from "./cuz.jpg";
 import huz from "./huz.png";
+import hrs from "./hrs.jpg";
+import ams from "./ams.jpg";
+import wtp from "./wtp.jpg";
+import goo from "./goo.jpg";
 export {
   logo,
+  goo,
+  hrs,
+  ams,
+  wtp,
   prev,
   ruz,
   cuz,

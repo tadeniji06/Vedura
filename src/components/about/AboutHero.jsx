@@ -29,7 +29,7 @@ const AboutHero = () => {
             <span className='text-2xl md:text-4xl font-bold leading-snug'>
               The Vision Behind Vedura
             </span>
-            <p className='text-sm md:text-base leading-relaxed'>
+            <p className='text-sm sm:text-base lg:text-lg leading-relaxed'>
               At Vedura, we believe that a home should be more than a
               structure, it should be a sanctuary. <br /> Inspired by
               nature and refined by design, Vedura is a curated response to

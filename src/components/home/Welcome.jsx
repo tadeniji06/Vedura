@@ -130,7 +130,7 @@ const Welcome = () => {
 
       {/* Button with playful continuous bounce */}
       <motion.button
-        className='bg-white rounded-lg px-8 md:px-10 py-3 md:py-4 text-primary-green font-medium shadow-lg hover:shadow-xl transition-shadow duration-300 text-sm md:text-base'
+        className='bg-white rounded-lg px-8 md:px-5 py-3 md:py-3 text-primary-green font-medium shadow-lg hover:shadow-xl transition-shadow duration-300 text-sm md:text-base'
         variants={buttonVariants}
         whileHover='hover'
         whileTap='tap'
