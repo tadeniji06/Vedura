@@ -52,10 +52,14 @@ import huz from "./huz.png";
 import hrs from "./hrs.jpg";
 import ams from "./ams.jpg";
 import wtp from "./wtp.jpg";
+import gn from "./gn.jpg";
 import goo from "./goo.jpg";
+import gmd from "./gmd.jpg";
 export {
   logo,
   goo,
+  gmd,
+  gn,
   hrs,
   ams,
   wtp,

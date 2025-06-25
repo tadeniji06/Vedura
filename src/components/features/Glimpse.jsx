@@ -1,4 +1,4 @@
-import { ruz, cuz, huz } from "../../assets";
+import { ruz, cuz, huz, gn, gmd } from "../../assets";
 
 const Glimpse = () => {
   const features = [
@@ -17,7 +17,7 @@ const Glimpse = () => {
       title: "18-Hole Golf Course",
       description:
         "Set against a backdrop of lush greenery and rolling terrain, Vedura's 18-hole golf course offers a peaceful escape for both casual and seasoned golfers. Thoughtfully designed to blend with the natural landscape, the course combines beauty with playability — featuring manicured fairways, scenic water elements, and calming views at every turn.",
-      image: cuz,
+      image: gmd,
       imageAlt: "Golf Course at Vedura",
     },
     {
