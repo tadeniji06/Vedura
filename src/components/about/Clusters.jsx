@@ -22,7 +22,7 @@ const Clusters = () => {
 			status: "UnAvailable",
 		},
 		{
-			id: 2,
+			id: 3,
 			title: "Luxury Zone",
 			req: "Minimum of 1000 sqm",
 			price: "₦240,000/sqm",
