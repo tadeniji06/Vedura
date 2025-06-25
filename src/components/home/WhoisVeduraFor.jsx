@@ -4,7 +4,7 @@ const WhoisVeduraFor = () => {
   const opportunities = [
     {
       id: 1,
-      title: "Individuals Looking for Land with Long term value",
+      title: "Individuals in search for Long term value",
       body: "Whether you're planning to develop immediately or hold for appreciation, Vedura offers you prime real estate in a growth corridor, where infrastructure development, urban expansion, and rising demand will continue to drive up land value.",
       img: land,
     },

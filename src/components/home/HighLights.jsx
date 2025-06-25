@@ -109,12 +109,12 @@ const HighLights = () => {
 						duration: 0.6,
 					}}
 				>
-					From lush gardens to smart home
+					{/* From lush gardens to smart home
 					integration, every feature at Vedura is
 					thoughtfully crafted to elevate your
 					everyday living. A glimpse into the
 					lifestyle and space you'll soon call
-					home
+					home */}
 				</motion.p>
 			</motion.div>
 
