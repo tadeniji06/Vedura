@@ -97,12 +97,12 @@ const Footer = () => {
 						>
 							Why Vedura?
 						</Link>
-						<Link
-							to='/about#faq'
+						<a
+							href="/about#faq"
 							className='hover:underline text-sm md:text-base transition-all duration-200 hover:text-gray-200'
 						>
 							FAQ
-						</Link>
+						</a>
 					</div>
 				</div>
 			</motion.div>
