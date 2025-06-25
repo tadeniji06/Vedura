@@ -88,12 +88,12 @@ const Glimpse = () => {
                   {feature.description}
                 </p>
 
-                <button className='bg-primary-green text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-green/90 transition-colors duration-300 inline-flex items-center gap-2'>
+                {/* <button className='bg-primary-green text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-green/90 transition-colors duration-300 inline-flex items-center gap-2'>
                   Learn More
                   <span className='transition-transform duration-300 group-hover:translate-x-1'>
                     →
                   </span>
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
