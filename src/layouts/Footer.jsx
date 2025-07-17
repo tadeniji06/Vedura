@@ -3,6 +3,7 @@ import { logo } from "../assets";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { formLink } from "../utils/data";
 
 const containerVariants = {
 	hidden: { opacity: 0, y: 40 },
@@ -22,6 +23,10 @@ const itemVariants = {
 };
 
 const Footer = () => {
+	const handleFormRedirect = () => {
+		window.open(formLink, "_blank", "noopener,noreferrer");
+	};
+
 	return (
 		<motion.footer
 			className='bg-primary-green mt-10 px-6 py-10 flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-24 2xl:gap-32 md:px-12 lg:px-16 xl:px-24 2xl:px-32 max-w-full mx-auto'
@@ -35,11 +40,7 @@ const Footer = () => {
 				className='flex flex-col gap-5 lg:w-1/2 xl:w-2/5'
 				variants={itemVariants}
 			>
-				<img
-					className='w-[120px] h-[38px]'
-					src={logo}
-					alt='Logo'
-				/>
+				<img className='w-[120px] h-[38px]' src={logo} alt='Logo' />
 
 				<div className='flex flex-wrap gap-4 lg:gap-5'>
 					{socials.map((item) => (
@@ -68,14 +69,14 @@ const Footer = () => {
 						<Icon
 							className='text-white text-2xl cursor-pointer hover:text-gray-200 transition-colors duration-200'
 							icon={"weui:arrow-filled"}
+							onClick={handleFormRedirect}
 						/>
 					</div>
 				</div>
 
 				<div className='mt-5'>
 					<p className='text-white text-sm md:text-base font-medium opacity-90'>
-						© 2025 Casafina Development. All
-						rights reserved
+						© 2025 Casafina Development. All rights reserved
 					</p>
 				</div>
 			</motion.div>
@@ -98,7 +99,7 @@ const Footer = () => {
 							Why Vedura?
 						</Link>
 						<a
-							href="/about#faq"
+							href='/about#faq'
 							className='hover:underline text-sm md:text-base transition-all duration-200 hover:text-gray-200'
 						>
 							FAQ
